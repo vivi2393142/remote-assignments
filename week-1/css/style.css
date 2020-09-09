@@ -1,0 +1,202 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	font-size: 14px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #EEEEEE;
+}
+
+img {
+	width: 2.5em;
+	height: 2.5em;
+	padding: 0 0.5em;
+}
+
+.nav li{
+	width: 12em;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	display: block;
+	padding: 1em 0;
+	text-decoration: none;
+}
+
+a:link,
+a:visited {
+	color: black;
+}
+
+a:hover {
+	color: #8899AA;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ===== nav bar ===== */
+
+.main-header,
+.menu,
+.menubutton,
+.contents,
+.webtitle {
+	display: flex;
+}
+
+.main-header {
+	padding: 0.4em 3em;
+}
+
+.logo {
+	margin-right: auto;
+}
+
+.wrap{
+	width: 90%;
+	margin: auto;
+	max-width: 1200px;
+}
+
+.webtitle {
+	align-items: center
+}
+
+/* ===== unfold menu =====- */
+
+.menu,
+.nav {
+	flex-direction: column;
+}
+
+.nav{
+	position: absolute;
+	right: 0;
+	top: 38px;
+	background-color: white;
+	border: 1px solid #EEEEEE;
+	display: none;
+}
+
+/* ===== menu button ===== */
+
+/*製作trigger button樣式*/
+.menubutton {
+	flex-direction: column;
+	width: 1.4em;
+	height: 1.5em;
+	justify-content: space-around;
+	padding: 0.4em 0.3em;
+}
+
+.line {
+	border-bottom: 1px solid black;  
+}
+
+/*hover trigger button時更改顏色*/
+.menubutton:hover .line{             
+	border-color: #8899AA;
+}
+
+.menu:hover .nav{
+	display: flex;
+}
+
+/* ===== banner ===== */
+
+.banner {
+	padding: 4em 0;
+	background-color: #CCDDEE;
+}
+
+.welcome {
+	font-size: 1.5em;
+}
+
+/* ===== section ====== */
+
+.sectiontitle {
+	font-size: 1.2em;
+	padding: 1.2em 0;
+}
+
+.contents{
+	flex-direction: column;
+	padding-bottom: 1em;
+}
+
+.contentbox {
+	background-color: #8899AA;
+	padding: 1em 0;
+	height: 10em;
+	margin: 0.6em 0;
+}
+
+/* call-to-action按鈕設置 */
+.button {                              
+	background-color: #DCEFFF;
+	display: inline-block;
+}
+
+.button a{
+	padding: 0.5em 1em;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 500px) {
+	
+	.contents{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.contentbox {
+		width: 48%;
+		margin: 1%;
+	}
+
+
+@media (min-width: 800px) {
+	.menubutton {
+		display: none;
+	}
+
+	.nav {
+		display: flex;
+		flex: 1;
+		position: static;
+		flex-direction: row;
+		background-color: inherit;
+	}
+
+	.nav li{
+		width: 5em;
+	}
+
+	.nav li a{
+		padding: 5px 0;
+	}
+}
+
+@media (min-width: 1200px) {
+
+}
+
+
+
+
