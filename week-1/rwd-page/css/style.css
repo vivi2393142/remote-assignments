@@ -154,8 +154,14 @@ a:hover {
 	padding: 0.5em 1em;
 }
 
+.assign2 {
+	position: fixed;	
+	right: 5%;
+	bottom: 1%;
+}
+
 .assign2 a{
-	text-decoration: underline;
+/*	text-decoration: underline;*/
 	color: blue;
 	display: inline-block;
 }
