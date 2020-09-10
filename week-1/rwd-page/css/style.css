@@ -150,8 +150,18 @@ a:hover {
 	display: inline-block;
 }
 
-.button a{
+.button a {
 	padding: 0.5em 1em;
+}
+
+.assign2 a{
+	text-decoration: underline;
+	color: blue;
+	display: inline-block;
+}
+
+.assign2 a:hover {
+	color: #8899AA
 }
 
 /* ================================= 

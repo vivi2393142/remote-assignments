@@ -1,0 +1,328 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	color: #222;
+/*	border: 1px solid red;*/
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	height: 50px;
+}
+
+h1 {
+	font-size: 1.8em;
+	font-weight: normal;
+}
+
+span {
+	font-size: inherit;
+	font-weight: 900;
+}
+
+a {
+	text-decoration: none;
+}
+
+h3 a{
+	font-size: 1.5em;
+	font-weight: normal;
+	color: #1a73e8;
+}
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+header,
+.banner,
+.products,
+.other-tools,
+.news,
+footer { 
+ 	display: flex;
+ 	padding: 0.8em 1.5em;
+}
+
+header {
+	position: fixed;
+	z-index: 2;
+	background-color: #FFFFFF;
+	width: 100%;
+	box-shadow: 2px 2px 5px #888;
+	align-items: center;
+}
+
+/* ===== header ===== */
+
+.nav-menu,
+.lan-menu {
+	display: none;
+}
+
+.nav-button {
+	height: 2.2em;
+	margin: 0 2em 0 0;
+}
+
+.search {
+	height: 1.8em;
+	margin: 0 2em 0 0;
+}
+
+.logo-img {
+	margin-right: auto;
+	height: 2.5em;
+}
+
+.account {
+	height: 2.3em;
+	border-radius: 50%;
+}
+
+
+/* ===== banner ===== */
+
+.banner {
+	flex-direction: column;
+	align-items: center;
+	padding-top: 5em;
+	padding-bottom: 2em;
+	border-bottom: 1px solid rgb(218, 220, 224);
+}
+
+.banner-title-img {
+	width: 100%;
+	height: 100%;
+	margin: 2em 0;
+}
+
+.banner-content {
+	margin: 2em 0;
+}
+
+.button {
+	background-color: #1a73eb;
+	border-radius: 0.2em;
+	color: white;
+	padding: 0.5em 1.5em;
+}
+
+.button:hover {
+	box-shadow: 0 2px 2.5px rgb(0,0,0,0.3);
+}
+
+/* ===== section - products ====== */
+
+.products {
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2em;
+}
+
+.product-items p {
+	font-size: 1.1em;
+}
+
+.products-contents {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0.8em 0 4em 0;
+}
+
+.product-items {
+	display: flex;
+	display: column;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 48%;
+	height: 7em;
+	margin: 3% 1%;
+}
+
+.android-img {
+	margin: auto 0;
+	height: 2.7em;
+}
+
+.other-img {
+	width: 4.5em;
+	height: 4.5em;
+}
+
+
+/* ===== section - tools ====== */
+
+.other-tools {
+	flex-wrap: wrap;
+}
+
+.tool-box {
+	display: flex;
+	flex-direction: column;
+	margin: 0.5em 0;
+	border-radius: 0.5em;
+	border: 1px solid rgba(0,0,0,0.2);
+	position: relative;
+}
+
+.tool-box-content {
+	padding: 1em;
+}
+
+.tool-box-content p {
+	margin: 1em 0;
+}
+
+.other-tools-button {
+	background-color: #FFFFFF;
+	border: 1px solid rgba(0,0,0,0.2);
+	color: #1a73e8;
+	display: inline-block;
+}
+
+.other-tools-button:hover {
+	box-shadow: 0 0 0 0;
+	background-color: rgb(226,236,254);
+	border-color: rgb(200,219,252);
+}
+
+.tool-main-img {
+	position: absolute;
+	max-height: 80%;  
+    max-width: 80%; 
+    width: auto;
+    height: auto;
+	top: -25%;
+	right: 0;
+}
+
+/* ===== section - news ====== */
+
+.news {
+	flex-wrap: wrap;
+	background-color: #f1f3f4;
+	justify-content: center;
+}
+
+.news h1 {
+	margin-bottom: 0.9em;
+}
+
+.news-box {
+	background-color: #ffffff;
+	align-items: center;
+}
+
+.news-wrap-img {
+	height: 22em;
+	display: flex;
+	align-items: center;
+}
+
+.news-img {
+    width: 9em;
+    height: auto;
+}
+
+.news-button {
+	border: none;
+}
+
+/* ===== footer ====== */
+
+footer {
+	flex-wrap: wrap;
+	border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+footer a {
+	display: block;
+	line-height: 2.6em;
+	font-size: 0.95em;
+}
+
+footer a:hover {
+	color: rgb(26, 115, 232);
+}
+
+
+/* ===== footer - main-footer====== */
+
+.main-footer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.main-footer h3 {
+	font-size: 1.2em;
+	font-weight: normal;
+}
+
+.footer-content {
+	margin: 1em 0;
+	width: 100%;
+}
+
+/* ===== footer - sub-footer====== */
+
+.sub-footer {
+	width: 100%;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	padding: 1.5em 0;
+}
+
+
+/* ===== footer - footer-privacy ====== */
+
+.footer-privacy {
+	width: 100%;
+	padding: 1.5em 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-lan {
+	display: flex;
+}
+.sign-up {
+	line-height: 2.6em;
+	font-size: 0.95em;
+	font-weight: normal;
+
+}
+
+.footer-privacy .button {
+	width: 20%;
+}
+
+.terms-privacy a,
+.terms-privacy p {
+	display: inline-block;
+}
+
+.lan-menu {
+	border-radius: 0.2em;
+	padding: 0.5em 1.5em;
+	border: 1px solid rgba(0,0,0,0.2);
+
+}
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
