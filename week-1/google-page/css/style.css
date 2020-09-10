@@ -51,7 +51,6 @@ footer,
 .banner,
 .products,
 .other-tools,
-.news,
 .news-content { 
  	display: flex;
  	padding: 1.5em 1.5em;
@@ -62,7 +61,8 @@ footer,
 .product-items,
 .tool-box,
 .tool-box-content,
-.footer-privacy {
+.footer-privacy,
+.news {
  	display: flex;
  	flex-direction: column;
  }
@@ -221,7 +221,6 @@ header {
 /* ===== section - news ====== */
 
 .news {
-	flex-direction: column;
 	background-color: #f1f3f4;
 	justify-content: center;
 }
