@@ -10,23 +10,29 @@
 	<body>
 <!-- Header/Nav -->
 		<header> 
+			<div class="main-nav">
 	<!-- 折疊選單 -->                                   
-			<img class="nav-button" src="img/nav-button.svg" alt="Nav-button">
-    <!--  Logo   -->                                         
-			<img class="logo-img" src="img/logo.svg" alt="Logo">                             
+				<img class="nav-button" src="img/nav-button.svg" alt="Nav-button">       
 	<!-- 展開選單 -->
-			<ul class="nav-menu">                                       
-				<li><a href="#">Products</a></li>
-				<li><a href="#">Events</a></li>
-				<li><a href="#">Learn</a></li>
-				<li><a href="#">Developer Communties</a></li>
-				<li><a href="#">Blog</a></li>
-			</ul>
+				<ul class="nav-menu">                                       
+					<li><a class="nav-menu-item" href="#">Products</a></li>
+					<li><a class="nav-menu-item" href="#">Events</a></li>
+					<li><a class="nav-menu-item" href="#">Learn</a></li>
+					<li><a class="nav-menu-item" href="#">Developer Communties</a></li>
+					<li><a class="nav-menu-item" href="#">Blog</a></li>
+				</ul>
+			</div>
+    <!--  Logo   -->                                         
+			<a class="logo-link" href="#"><img class="logo-img" src="img/logo.svg" alt="Logo"></a>
     <!-- 搜尋放大鏡 -->
 			<img class="search" src="img/search.svg" alt="Nav-button">
 	<!--  語言選擇  -->		
-			<div class="lan-menu"> 
+			<div class="button lan-menu header-lan"> 
 				English
+				<ul class=" lan-list">
+					<li >中文</li>
+					<li>Deutsch</li>
+				</ul>
 			</div>
 	<!--  帳戶大頭照  -->                                  
 			<img class="account" src="img/account.png" alt="Account">	
@@ -36,7 +42,7 @@
 		<div class="banner">
 			<img class="banner-title-img" src="img/banner-title.svg"> 
 			<p class="banner-content"> Celebrate the beta launch of Android 11 with the 11 Weeks of Android virtual event. Follow along as we present new developer content in areas like UI, Android Jetpack, and Machine Learning. Each week also features its own learning pathway, with a unique badge you can earn for your developer profile. </p>
-			<div class="button banner-button"> View Schedule </div>
+			<div class="button banner-button"><a href="#"> View Schedule </a></div>
 		</div>
 <!-- 主要內容 -->
 	<!-- Products -->
@@ -85,14 +91,14 @@
 				</div>
 				<div class="product-items">
 				    <img class="other-img" src="img/google-play.png" alt="Google Paly">
-				    <p>Google Paly</p>
+				    <p>Google Play</p>
 				</div>
 				<div class="product-items">
 				    <img class="other-img" src="img/youtube.png" alt="YouTube">
 				    <p>YouTube</p>
 				</div>
 			</div>
-			<div class="button products-button"> View all developer products </div>
+			<div class="button products-button"><a href="#"> View all developer products </a></div>
 		</section>
 	<!-- Other Tools -->
 		<section class="other-tools">
@@ -102,7 +108,7 @@
 				<div class="tool-box-content">
 					<h3><a href="#">Events</a></h3>
 					<p> Bringing developers together in-person and online. Stay in the know about upcoming events, catch up on content you missed, and connect with Google experts.</p>
-					<div class="button other-tools-button">See events</div>
+					<div class="button other-tools-button"><a href="#">See events</a></div>
 				</div>
 			</div>
 			<div class="tool-box">
@@ -111,7 +117,7 @@
 				<div class="tool-box-content">
 					<h3><a href="#">Community</a></h3>
 					<p> Connect with fellow developers and startups in your area, hear from industry experts, share your skills, and learn new ones.</p>
-					<div class="button other-tools-button">Find community</div>
+					<div class="button other-tools-button"><a href="#">Find community</a></div>
 				</div>
 			</div>
 		</section>
@@ -124,7 +130,7 @@
 					<div class="tool-box-content">
 						<h3><a href="#"><a href="#">Supporting the Black+ developer community</a></h3>
 						<p> Black developers are contributing important work to the world. We’re dedicating space to amplify what you’re making with Google tech. Submit to be considered in the next Google Developers newsletter.</p>
-						<div class="button other-tools-button news-button">Submit your work</div>
+						<div class="button other-tools-button news-button"><a href="#">Submit your work</a></div>
 					</div>
 				</div>
 				<div class="tool-box news-box">
@@ -132,7 +138,7 @@
 					<div class="tool-box-content">
 						<h3><a href="#">Make sure your website works during COVID-19</a></h3>
 						<p> Visit web.dev/covid19 for guidance and fundamentals on performance, SEO, network resilience, and accessibility so your site is available, usable, discoverable, secure, and fast.</p>
-						<div class="button other-tools-button news-button">Learn more</div>
+						<div class="button other-tools-button news-button"><a href="#">Learn more</a></div>
 					</div>
 				</div>
 				<div class="tool-box news-box">
@@ -140,7 +146,7 @@
 					<div class="tool-box-content">
 						<h3><a href="#">Latest updates from Google Play</a></h3>
 						<p>Catch up on the latest updates from Google Play, including the new Google Play Console beta, improvements to Android App Bundles, the recently launched in-app review API, and more.</p>
-						<div class="button other-tools-button news-button">Learn more</div>
+						<div class="button other-tools-button news-button"><a href="#">Learn more</a></div>
 					</div>
 				</div>
 				<div class="tool-box news-box">
@@ -148,7 +154,7 @@
 						<div class="tool-box-content">
 						<h3><a href="#">Make COVID-19 info more accessible</a></h3>
 						<p>If you're building or maintaining a health organization website that qualifies as a national health ministry or US state-level agency, you can request to join the COVID-19 Google Search technical support group.</p>
-						<div class="button other-tools-button news-button">Learn more</div>
+						<div class="button other-tools-button news-button"><a href="#">Learn more</a></div>
 					</div>
 				</div>
 				<div class="tool-box news-box">
@@ -156,7 +162,7 @@
 					<div class="tool-box-content">
 						<h3><a href="#">Learn Flutter for free</a></h3>
 						<p>Intro to Flutter is available for three months and requires no programming experience. In just 10+ hours of videos and hands-on labs, you build nine apps.</p>
-						<div class="button other-tools-button news-button">Learn more</div>
+						<div class="button other-tools-button news-button"><a href="#">Learn more</a></div>
 					</div>
 				</div>
 				<div class="tool-box news-box">
@@ -164,7 +170,7 @@
 					<div class="tool-box-content">
 							<h3><a href="#">15 years of Google Maps Platform</a></h3>
 							<p>15 years ago, what was then known as Google Maps APIs made Google's knowledge of the real world available to developers. Take a look back at the history of Google Maps Platform, and see what's new to help you keep building.</p>
-							<div class="button other-tools-button news-button">Learn more</div>
+							<div class="button other-tools-button news-button"><a href="#">Learn more</a></div>
 					</div>
 				</div>
 				<div class="tool-box news-box">
@@ -172,7 +178,7 @@
 					<div class="tool-box-content">
 						<h3><a href="#">Introducing the new TensorFlow Profiler</a></h3>
 						<p>TensorFlow has developed an extensive set of tools for performance profiling. Beyond the ability to capture and investigate numerous aspects of a profile, the tools offer guidance on how to resolve performance bottlenecks like input-bound programs.</p>
-						<div class="button other-tools-button news-button">Learn more</div>
+						<div class="button other-tools-button news-button"><a href="#">Learn more</a></div>
 					</div>
 				</div>
 				<div class="tool-box news-box">
@@ -180,7 +186,7 @@
 					<div class="tool-box-content">
 						<h3><a href="#">Get details on the Android 11 beta</a></h3>
 						<p>Android released a fourth Developer Preview and moved Beta 1 to June 3. To get more information about new releases, join us for #Android11: the Beta Launch Show.</p>
-						<div class="button other-tools-button news-button">Learn more</div>
+						<div class="button other-tools-button news-button"><a href="#">Learn more</a></div>
 					</div>
 				</div>
 			</div>
@@ -243,7 +249,7 @@
 				</div>
 				<div class="subscribe">
 					<h5 class="sign-up">Sign up for the Google Developers newsletter</h5>
-					<div class="button">Subscribe</div>
+					<div class="button"><a href="#">Subscribe</a></div>
 				</div>
 				<div class="wrap-footer-lan"><div class="button lan-menu footer-lan"> English </div></div>
 			</div>
