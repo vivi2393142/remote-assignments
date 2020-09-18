@@ -31,8 +31,8 @@ h3 {
 
 li {
 	font-size: 1.2em;
-	line-height: 2.5;
 	text-align: left;
+	padding: 0.5em 0;
 }
 
 section {
