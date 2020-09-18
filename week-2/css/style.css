@@ -1,0 +1,72 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	color: #313E4A;
+	font-weight: normal;
+}
+
+header {
+	padding: 2.5em 0;
+	background-color: #313E4A;
+	text-align: center;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 1.8em;	
+	letter-spacing: 0.5px;
+	padding-bottom: 0.3em;
+	color: white;
+}
+
+h3 {
+	font-size: 1.2em;
+	color: white;
+}
+
+li {
+	font-size: 1.2em;
+	line-height: 2.5;
+	text-align: left;
+}
+
+section {
+	padding: 2.5em 20%;
+	max-width: 650px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+span {
+	font-size: inherit;	
+	white-space: pre;
+	color: white;
+	background-color: #313E4A;
+}
+
+.link {
+	display: inline-block;
+
+}
+
+a { 
+	font-size: 1.2em;
+	text-decoration: none; 
+	display: block;
+	font-weight: 500;
+	color: #313E4A;
+	margin: 2em 0;
+	padding: 0.4em 1.2em;
+	border: 2px solid #313E4A;
+	border-radius: 0.5em;
+}
+
+.link :hover {
+	color: white;
+	background-color: #313E4A;
+}
