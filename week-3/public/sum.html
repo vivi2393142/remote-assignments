@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week3 Assignments | Vivi Lin</title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>WEEK 3 | ASSIGNMENTS</h1>
+            <h3>Vivi Lin</h3>
+        </header>
+        <section>
+        	<h5> 輸入任意正整數n，<br>系統將自動計算1+2+...+n的總和</h5>
+        	<input id="numberSubmit" placeholder="輸入任意正整數"><br>
+        	<button id="submit">開始計算</button>
+        	<h3 id="result"></h3>
+        </section>
+
+        <script>
+    		document.getElementById('submit').onclick = function(){
+    	    	let numberReceive = document.getElementById('numberSubmit').value; 	
+    	    	const xhr = new XMLHttpRequest();
+    	    	xhr.onreadystatechange = () => {
+    	    		if (xhr.readyState === 4){
+    	    			document.getElementById('result').innerHTML = `${xhr.responseText}`;
+    	    		}
+    	    	}
+    	    	xhr.open('GET',`/getData?number=${numberReceive}`);
+    	    	xhr.send();
+    	    	document.getElementById('result').style.display = 'block';
+    		}
+    	</script>
+    </body>
+
+</html>

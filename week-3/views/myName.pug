@@ -1,0 +1,19 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Week3 Assignments | Vivi Lin
+		link(rel='stylesheet', href='css/style.css')
+	header
+		h1 WEEK 3 | ASSIGNMENTS
+		h3 Vivi Lin
+	section
+		if name
+			h5 #{name} 您好！
+		else
+			h5 輸入您的姓名
+			form(action='/myName', method='get')
+				input#nameSubmit(name='username',placeholder='您的稱呼')
+				br
+				button#nameSubmitButton(type='submit') 送出

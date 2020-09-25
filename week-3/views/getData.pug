@@ -1,0 +1,13 @@
+extends layout.pug
+
+block contents
+	//- 判斷是否有參數
+	if !queryNumberString 
+		h4 Lack of Parameter
+	//- 判斷參數是否為正整數
+	else if queryNumber>0 & (queryNumber%1)===0  
+		h4 #{sum}
+	//- 判斷是否有參數但非為正整數
+	else
+		h4 Wrong Parameter 
+		
