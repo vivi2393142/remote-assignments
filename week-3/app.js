@@ -31,12 +31,13 @@ app.get('/getData',(req,res)=>{
 
 //--Assignment 4: HTTP Cookie--//
 app.get('/myName', (req,res)=>{
-	if (req.query.username) {
-		const queryName = req.query.username;           // 自query string取得username
-		res.cookie('username', queryName);              // 把存到cookie中
-		res.redirect('/myName');                        // 重新導至主頁
-	}
 	res.render('myName', { name:req.cookies.username });
+});
+
+app.get('/trackName', (req,res)=>{
+	const queryName = req.query.username;           // 自query string取得username
+	res.cookie('username', queryName);              // 把存到cookie中
+	res.redirect('/myName');                        // 重新導至主頁
 });
 
 
