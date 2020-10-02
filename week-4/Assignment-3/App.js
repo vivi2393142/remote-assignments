@@ -104,7 +104,7 @@ const Wrap = props => (
       <Contents />
       <CallButton toggleNotCallAction={props.toggleNotCallAction}/>
       <CallContents notCallAction={props.notCallAction}/>
-      <div className="backTo"><a href="../index.html"> Back to other assignments </a></div>
+      <div className="backTo"><a href="../index.html"> &lt; Back to other assignments </a></div>
   </section>
 )
 
