@@ -1,6 +1,6 @@
 // Component: 導覽列相關components - MenuButton, Nav, Menu, CloseButton
 const MenuButton = (props) => (
-  <ul className='menubutton' onClick={props.toggleNavUnfold}>
+  <ul className='menubutton' onClick={() => props.setSmallNavUnfold(true)}>
     <li className='line'></li>
     <li className='line'></li>
     <li className='line'></li>
@@ -31,14 +31,14 @@ const Nav = (props) => {
 
 const Menu = (props) => (
   <div className='menu'>
-    <MenuButton toggleNavUnfold={props.toggleNavUnfold} />
+    <MenuButton setSmallNavUnfold={props.setSmallNavUnfold} />
     <Nav classname='smallNav' navUnfold={props.smallNavUnfold} />
     <Nav classname='bigNav' navUnfold={true} />
   </div>
 );
 
 const CloseButton = (props) => (
-  <div className='closeButton' onClick={props.toggleCloseNav}>
+  <div className='closeButton' onClick={() => props.setSmallNavUnfold(false)}>
     X
   </div>
 );
@@ -49,11 +49,11 @@ const Header = (props) => (
     <h1 className='webtitle'>Website Title</h1>
     <img className='logo' src='img/logo.png' alt='logo' />
     <Menu
-      toggleNavUnfold={props.toggleNavUnfold}
+      setSmallNavUnfold={props.setSmallNavUnfold}
       smallNavUnfold={props.smallNavUnfold}
     />
     {props.smallNavUnfold ? (
-      <CloseButton toggleCloseNav={props.toggleCloseNav} />
+      <CloseButton setSmallNavUnfold={props.setSmallNavUnfold} />
     ) : null}
   </header>
 );
@@ -61,7 +61,10 @@ const Header = (props) => (
 // Component: Banner包含welcomeText
 const Banner = (props) => (
   <div className='banner'>
-    <h1 className='welcome' onClick={props.changeWelcomeText}>
+    <h1
+      className='welcome'
+      onClick={() => props.setWelcomeText('Have a Good Time!')}
+    >
       {props.welcomeText}
     </h1>
   </div>
@@ -87,7 +90,7 @@ const Contents = () => (
 
 // Component: 呼叫用按鈕
 const CallButton = (props) => (
-  <div className='button' onClick={props.toggleNotCallAction}>
+  <div className='button' onClick={() => props.setNotCallAction(false)}>
     <a href='#'>Call to Action</a>
   </div>
 );
@@ -109,7 +112,7 @@ const Wrap = (props) => (
   <section className='wrap'>
     <h1 className='sectiontitle'>Section Title</h1>
     <Contents />
-    <CallButton toggleNotCallAction={props.toggleNotCallAction} />
+    <CallButton setNotCallAction={props.setNotCallAction} />
     <CallContents notCallAction={props.notCallAction} />
     <div className='backTo'>
       <a href='../index.html'> &lt; Back to other assignments </a>
@@ -117,59 +120,21 @@ const Wrap = (props) => (
   </section>
 );
 
-class App extends React.Component {
-  state = {
-    notCallAction: true,
-    smallNavUnfold: false,
-    welcomeText: 'Welcome Message',
-  };
+const App = () => {
+  const [notCallAction, setNotCallAction] = React.useState(true);
+  const [smallNavUnfold, setSmallNavUnfold] = React.useState(false);
+  const [welcomeText, setWelcomeText] = React.useState('Welcome Message');
 
-  // Function: 更改callAction狀態
-  toggleNotCallAction = () =>
-    this.setState({
-      notCallAction: false,
-    });
-
-  // Function: 點選折疊選單，更改smallNavUnfold狀態
-  toggleNavUnfold = () => {
-    this.setState({
-      smallNavUnfold: true,
-    });
-  };
-
-  // Function: 點選叉叉，更改smallNavUnfold狀態
-  toggleCloseNav = () => {
-    this.setState({
-      smallNavUnfold: false,
-    });
-  };
-
-  // Function: 更改welcomeText
-  changeWelcomeText = () => {
-    this.setState({
-      welcomeText: 'Have a Good Time!',
-    });
-  };
-
-  render() {
-    return (
-      <div className='App'>
-        <Header
-          toggleNavUnfold={this.toggleNavUnfold}
-          toggleCloseNav={this.toggleCloseNav}
-          smallNavUnfold={this.state.smallNavUnfold}
-        />
-        <Banner
-          welcomeText={this.state.welcomeText}
-          changeWelcomeText={this.changeWelcomeText}
-        />
-        <Wrap
-          notCallAction={this.state.notCallAction}
-          toggleNotCallAction={this.toggleNotCallAction}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div className='App'>
+      <Header
+        setSmallNavUnfold={setSmallNavUnfold}
+        smallNavUnfold={smallNavUnfold}
+      />
+      <Banner welcomeText={welcomeText} setWelcomeText={setWelcomeText} />
+      <Wrap notCallAction={notCallAction} setNotCallAction={setNotCallAction} />
+    </div>
+  );
+};
 
 ReactDOM.render(<App />, document.getElementById('root'));

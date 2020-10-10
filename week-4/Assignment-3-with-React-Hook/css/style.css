@@ -1,0 +1,241 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	font-size: 14px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #EEEEEE;
+}
+
+img {
+	width: 2.5em;
+	height: 2.5em;
+	padding: 0 0.5em;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	display: block;
+	padding: 1em 1em;
+	text-decoration: none;
+	text-align: left;
+}
+
+a:link,
+a:visited {
+	color: black;
+}
+
+a:hover {
+	color: #8899AA;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ===== nav bar ===== */
+
+.main-header,
+.menu,
+.menubutton,
+.contents,
+.webtitle {
+	display: flex;
+}
+
+.main-header {
+	padding: 0.4em 3em;
+}
+
+.logo {
+	margin-right: auto;
+}
+
+.wrap{
+	width: 90%;
+	margin: auto;
+	max-width: 1200px;
+}
+
+.webtitle {
+	align-items: center
+}
+
+/* ===== unfold menu =====- */
+.menu {
+	position: relative;
+}
+
+.smallNav li{
+	width: 12em;
+}
+
+.menu,
+.smallNav {
+	flex-direction: column;
+}
+
+.smallNav {
+	position: fixed;
+	height: 100%;
+	right: 0;
+	top: 0;
+	background-color: white;
+	border: 1px solid #EEEEEE;
+}
+
+.bigNav {
+	height: auto;
+	display: none;
+	flex: 1;
+	position: static;
+	flex-direction: row;
+	background-color: inherit;
+}
+
+.bigNav li{
+	width: 5em;
+}
+
+.bigNav li a{
+	padding: 5px 0;
+}
+
+.closeButton {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	padding: 1em;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* ===== menu button ===== */
+
+/*製作trigger button樣式*/
+.menubutton {
+	flex-direction: column;
+	width: 1.4em;
+	height: 1.5em;
+	justify-content: space-around;
+	padding: 0.4em 0.3em;
+	cursor: pointer;
+}
+
+.line {
+	border-bottom: 1px solid black;  
+}
+
+/*hover trigger button時更改顏色*/
+.menubutton:hover .line{             
+	border-color: #8899AA;
+}
+
+/* ===== banner ===== */
+
+.banner {
+	padding: 4em 0;
+	background-color: #CCDDEE;
+	cursor: pointer;
+}
+
+.welcome {
+	font-size: 1.5em;
+}
+
+/* ===== section ====== */
+
+.sectiontitle {
+	font-size: 1.2em;
+	padding: 1.2em 0;
+}
+
+.contents{
+	flex-direction: column;
+}
+
+.contentbox {
+	background-color: #8899AA;
+	padding: 1em 0;
+	height: 10em;
+	margin: 0.6em 0;
+}
+
+/* call-to-action按鈕設置 */
+.button {                              
+	background-color: #DCEFFF;
+	display: inline-block;
+	margin: 1em 0;
+}
+
+.button a {
+	padding: 0.5em 1em;
+}
+
+.backTo {
+	position: fixed;	
+	left: 2%;
+	bottom: 1%;
+}
+
+.backTo a{
+/*	text-decoration: underline;*/
+	color: blue;
+	display: inline-block;
+}
+
+.backTo a:hover {
+	color: #8899AA;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 500px) {
+	.contents{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.contentbox {
+		width: 48%;
+		margin: 1%;
+	}
+
+
+@media (min-width: 800px) {
+	.menubutton {
+		display: none;
+	}
+
+	.bigNav{
+		display: flex;
+	}
+
+	.smallNav{
+		display: none;
+	}
+
+	.closeButton {
+		display: none;
+	}
+	
+}
+
+
+@media (min-width: 1200px) {
+
+}
